@@ -35,7 +35,8 @@ resource "azurerm_linux_virtual_machine" "backend" {
   name                = "vm-${var.application_name}-${var.environment_name}-backend${count.index}"
   resource_group_name = azurerm_resource_group.main.name
   location            = azurerm_resource_group.main.location
-  size                = "Standard_F2"
+  size                = var.backend_instance_type
+  # size                = "Standard_F2"
   admin_username      = var.admin_username
   zone                = count.index + 1
 

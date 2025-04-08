@@ -1,6 +1,6 @@
 application_name = "fleet-ops"
 environment_name = "dev"
-primary_region   = "westus2"
+primary_region   = "uksouth"
 frontend_image = {
   name                = "fleetops-frontend-2025.04.1"
   resource_group_name = "rg-packer"
